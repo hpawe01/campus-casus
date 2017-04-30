@@ -29,11 +29,6 @@ before_install:
   - if [[ "$SCRIPT" == "test" ]]; then wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb; fi
   - if [[ "$SCRIPT" == "test" ]]; then sudo dpkg -i google-chrome*.deb; fi
   - if [[ "$SCRIPT" == "test" ]]; then echo "--no-sandbox" > ~/.config/chrome-flags.conf; fi
-  # Install yarn.
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH="$HOME/.yarn/bin:$PATH"
-  - yarn config set spin false
-  - yarn config set progress false
   # Install karma for tests.
   - if [[ "$SCRIPT" == "test" ]]; then npm install -g karma; fi
 
