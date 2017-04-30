@@ -21,13 +21,7 @@ matrix:
       env: SCRIPT=test
     - node_js: "6"
       os: linux
-      env: NODE_SCRIPT="tests/run_e2e.js --glob=tests/build/**"
-    - node_js: "6"
-      os: linux
-      env: NODE_SCRIPT="tests/run_e2e.js --ignore=**/tests/build/**"
-    - node_js: "6"
-      os: linux
-      env: NODE_SCRIPT="tests/run_e2e.js --eject --glob=tests/build/**"
+      env: SCRIPT=e2e
 
 before_install:
   # Use a virtual display.
